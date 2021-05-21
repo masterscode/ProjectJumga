@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Merchant Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+
+    <link rel="stylesheet" th:href="@{/vendors/iconly/bold.css}">
+
+    <link rel="stylesheet" th:href="@{/vendors/perfect-scrollbar/perfect-scrollbar.css}">
+    <link rel="stylesheet" th:href="@{/vendors/bootstrap-icons/bootstrap-icons.css}">
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+    <link rel="shortcut icon" th:href="@{/images/favicon.svg}" type="image/x-icon">
+</head>
+
+<body>
+<div id="app">
+    <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+            <div class="sidebar-header">
+                <div class="d-flex justify-content-between">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                    </div>
+                    <div class="toggler">
+                        <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <ul class="menu">
+                    <li class="sidebar-title">Menu</li>
+
+                    <li class="sidebar-item ">
+                        <a href="/merchant" class='sidebar-link'>
+                            <i class="bi bi-grid-fill"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-shop"></i>
+                            <span>Products</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="/products">
+                                    <i class="bi bi-product"></i>
+                                    View Products
+                                </a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="/products/new">
+                                    <i class="bi bi-plus"></i>
+                                    New Products
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-shop"></i>
+                            <span>Shops</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="/shop">
+                                    <i class="bi bi-plus"></i>
+                                    Create Shop
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+        </div>
+    </div>
+
+    <div id="main">
+        <header class="mb-3">
+            <a class="burger-btn d-block d-xl-none" href="#">
+                <i class="bi bi-justify fs-3"></i>
+            </a>
+        </header>
+
+        <section id="multiple-column-form">
+            <div class="row match-height">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Shop Info</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <form class="form">
+                                    <div class="row">
+                                        <div class="col-md-12 col-12">
+                                            <div class="form-group">
+                                                <label for="shop-name">Shop Name</label>
+                                                <input type="text" id="shop-name" class="form-control" placeholder="First Name" name="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-12">
+                                            <div class="form-group">
+                                                <label for="description">Shop Description</label>
+                                                <textarea type="text" id="description" class="form-control" placeholder="A little info about this shop.." name="description"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--      =======================-->
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Billing Information</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <!--            <form class="form">-->
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="first-name-column">First Name</label>
+                                            <input type="text" id="first-name-column" class="form-control" placeholder="First Name" name="fname-column">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="last-name-column">Last Name</label>
+                                            <input type="text" id="last-name-column" class="form-control" placeholder="Last Name" name="lname-column">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="city-column">City</label>
+                                            <input type="text" id="city-column" class="form-control" placeholder="City" name="city-column">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="country-floating">Country</label>
+                                            <input type="text" id="country-floating" class="form-control" name="country-floating" placeholder="Country">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="company-column">Company</label>
+                                            <input type="text" id="company-column" class="form-control" name="company-column" placeholder="Company">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="email-id-column">Email</label>
+                                            <input type="email" id="email-id-column" class="form-control" name="email-id-column" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary me-1 mb-1 btn-lg">
+                                        Create Shop
+                                        <i class="bi bi-shop"></i>
+                                    </button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <script src="/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
+
+        <script src="/vendors/apexcharts/apexcharts.js"></script>
+        <script src="/js/pages/dashboard.js"></script>
+
+        <script src="/js/main.js"></script>
+</body>
+</html>

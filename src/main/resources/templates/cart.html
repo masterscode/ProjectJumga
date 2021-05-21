@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Merchant Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+
+    <link rel="stylesheet" th:href="@{/vendors/iconly/bold.css}">
+
+    <link rel="stylesheet" th:href="@{/vendors/perfect-scrollbar/perfect-scrollbar.css}">
+    <link rel="stylesheet" th:href="@{/vendors/bootstrap-icons/bootstrap-icons.css}">
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+    <link rel="shortcut icon" th:href="@{/images/favicon.svg}" type="image/x-icon">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between align-items-center"
+             id="navbarSupportedContent">
+
+            <ul class="navbar-nav nav-pills ms-auto mb-2 mb-lg-0 text-uppercase fw-bold">
+                <li class="nav-item ">
+                    <a aria-current="page" class="nav-link " href="">
+                        Shop
+                        <i class="bi bi-shop"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">
+                        Cart
+                        <i class="bi bi-cart"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1">
+                        My Account
+                        <i class="bi bi-person"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="auth/logout" tabindex="-1">
+                        <i class="bi bi-power text-danger"></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<table class="table shopping-summery">
+    <thead>
+    <tr class="main-hading">
+        <th>PRODUCT</th>
+        <th>NAME</th>
+        <th class="text-center">UNIT PRICE</th>
+        <th class="text-center">QUANTITY</th>
+        <th class="text-center">TOTAL</th>
+        <th class="text-center"><i class="bi bi-trash text-danger"></i></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="image" data-title="No"><img src="https://via.placeholder.com/100x100" alt="#"></td>
+        <td class="product-des" data-title="Description">
+            <p class="product-name"><a href="#">Women Dress</a></p>
+            <p class="product-des">Maboriosam in a tonto nesciung eget  distingy magndapibus.</p>
+        </td>
+        <td class="price" data-title="Price"><span>$110.00 </span></td>
+        <td class="qty" data-title="Qty"><!-- Input Order -->
+            <div class="input-group">
+                <div class="button minus">
+                    <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                        <i class="bi bi-dash"></i>
+                    </button>
+                </div>
+                <input type="text" name="" class="form-control form-control-sm text-center" data-min="1" data-max="100" value="1">
+                <div class="button plus">
+                    <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="">
+                        <i class="bi bi-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <!--/ End Input Order -->
+        </td>
+        <td class="total-amount" data-title="Total"><span>$220.88</span></td>
+        <td class="action" data-title="Remove"><a href="#"><i class="bi bi-trash text-danger"></i></a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
